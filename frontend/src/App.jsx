@@ -10,6 +10,7 @@ import VerifyEmail from './pages/VerifyEmail';
 import ForgotPassword from './pages/ForgotPassword';
 import ResetPassword from './pages/ResetPassword';
 import Dashboard from './pages/Dashboard';
+import ProfilePage from './pages/ProfilePage';
 
 // Components
 import ProtectedRoute from './components/Auth/ProtectedRoute';
@@ -53,6 +54,12 @@ function App() {
             <Route path="/dashboard" element={
               <ProtectedRoute requireVerification={true}>
                 <Dashboard />
+              </ProtectedRoute>
+            } />
+
+            <Route path="/profile" element={
+              <ProtectedRoute requireVerification={true}>
+                <ProfilePage />
               </ProtectedRoute>
             } />
 
